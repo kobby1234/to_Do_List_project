@@ -37,12 +37,12 @@ class ToDoList:
                 print("You did not enter task description\n")
 
         while openDate:
-            self.input_date = input("Enter due date DD-MM-YY\n")
+            self.input_date = input("Enter due date DD-MM-YYYY\n")
             try: 
                 datetime.strptime(self.input_date,"%d-%m-%Y")
                 openDate = False 
             except:
-                print("incorrect date format. use format of DD-MM-YY\n" )
+                print("incorrect date format. use format of DD-MM-YYYY\n" )
 
         while openStatus: 
             self.input_status = input("Enter the current status. : to do later  : in progress  : finish\n").strip().lower()
